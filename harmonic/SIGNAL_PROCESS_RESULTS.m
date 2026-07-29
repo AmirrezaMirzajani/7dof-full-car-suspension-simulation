@@ -1,0 +1,249 @@
+close all
+%% signal processing with FIR filter
+fig_num=1;
+figure(fig_num);
+signal_process_plot_with_filter(ztfl,'$z_{tfl}$') % fig1
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(ztfr,'$z_{tfr}$') % fig2
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(ztrl,'$z_{trl}$') % fig3
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(ztrr,'$z_{trr}$') % fig4
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(ztfl_dot,'$\dot{z}_{tfl}$') % fig5
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(ztfr_dot,'$\dot{z}_{tfr}$') % fig6
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(ztrl_dot,'$\dot{z}_{trl}$') % fig7
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(ztrr_dot,'$\dot{z}_{trr}$') % fig8
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(Fzfl,'$F_{zfl}$') % fig9
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(Fzfr,'$F_{zfr}$') % fig10
+%%
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(Fzrl,'$F_{zrl}$') % fig11
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(Fzrr,'$F_{zrr}$') % fig12
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(zsfl,'$z_{sfl}$') % fig13
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(zsfr,'$z_{sfr}$') % fig14
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(zsrl,'$z_{srl}$') % fig15
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(zsrr,'$z_{srr}$') % fig16
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(zsfl_dot,'$\dot{z}_{sfl}$') % fig17
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(zsfr_dot,'$\dot{z}_{sfr}$') % fig18
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(zsrl_dot,'$\dot{z}_{srl}$') % fig19
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(zsrr_dot,'$\dot{z}_{srr}$') % fig20
+figure(fig_num);
+fig_num = fig_num + 1;
+%%
+signal_process_plot_with_filter(zwfl,'$z_{wfl}$') % fig21
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(zwfr,'$z_{wfr}$') % fig22
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(zwrl,'$z_{wrl}$') % fig23
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(zwrr,'$z_{wrr}$') % fig24
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(zwfl_dot,'$\dot{z}_{wfl}$') % fig25
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(zwfr_dot,'$\dot{z}_{wfr}$') % fig26
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(zwrl_dot,'$\dot{z}_{wrl}$') % fig27
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(zwrr_dot,'$\dot{z}_{wrr}$') % fig28
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(Fsfl,'$F_{sfl}$') % fig29
+figure(fig_num);
+fig_num = fig_num + 1;
+%%
+signal_process_plot_with_filter(Fsfr,'$F_{sfr}$') % fig30
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(Fsrl,'$F_{srl}$') % fig31
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(Fsrr,'$F_{srr}$') % fig32
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(z2dot_sfl,'$\ddot{z}_{sfl}$') % fig33
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(z2dot_sfr,'$\ddot{z}_{sfr}$') % fig34
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(z2dot_srl,'$\ddot{z}_{srl}$') % fig35
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(z2dot_srr,'$\ddot{z}_{srr}$') % fig36
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot_with_filter(Z2dot,'$\ddot{z}$') % fig37
+figure(fig_num);
+fig_num = fig_num + 1;
+Phase_Diagram(Z,Z_dot,Z2dot) % fig38
+figure(fig_num);
+fig_num = fig_num + 1;
+Phase_Diagram(zufl, zufl_dot,z2dot_sfl) % fig39
+figure(fig_num);
+fig_num = fig_num + 1;
+Phase_Diagram(zufr, zufr_dot,z2dot_sfr) % fig40
+figure(fig_num);
+fig_num = fig_num + 1;
+%%
+Phase_Diagram(zurl, zurl_dot,z2dot_srl) % fig41
+figure(fig_num);
+fig_num = fig_num + 1;
+Phase_Diagram(zurr, zurr_dot,z2dot_srr) % fig42
+figure(fig_num);
+fig_num = fig_num + 1;
+
+%% signal processing without FIR filter
+signal_process_plot(ztfl,'$z_{tfl}$') % fig43
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(ztfr,'$z_{tfr}$') % fig44
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(ztrl,'$z_{trl}$') % fig45
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(ztrr,'$z_{trr}$') % fig46
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(ztfl_dot,'$\dot{z}_{tfl}$') % fig47
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(ztfr_dot,'$\dot{z}_{tfr}$') % fig48
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(ztrl_dot,'$\dot{z}_{trl}$') % fig49
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(ztrr_dot,'$\dot{z}_{trr}$') % fig50
+figure(fig_num);
+fig_num = fig_num + 1;
+%%
+signal_process_plot(Fzfl,'$F_{zfl}$') % fig51
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(Fzfr,'$F_{zfr}$') % fig52
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(Fzrl,'$F_{zrl}$') % fig53
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(Fzrr,'$F_{zrr}$') % fig54
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(zsfl,'$z_{sfl}$') % fig55
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(zsfr,'$z_{sfr}$') % fig56
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(zsrl,'$z_{srl}$') % fig57
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(zsrr,'$z_{srr}$') % fig58
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(zsfl_dot,'$\dot{z}_{sfl}$') % fig59
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(zsfr_dot,'$\dot{z}_{sfr}$') % fig60
+figure(fig_num);
+fig_num = fig_num + 1;
+%%
+signal_process_plot(zsrl_dot,'$\dot{z}_{srl}$') % fig61
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(zsrr_dot,'$\dot{z}_{srr}$') % fig62
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(zwfl,'$z_{wfl}$') % fig63
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(zwfr,'$z_{wfr}$') % fig64
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(zwrl,'$z_{wrl}$') % fig65
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(zwrr,'$z_{wrr}$') % fig66
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(zwfl_dot,'$\dot{z}_{wfl}$') % fig67
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(zwfr_dot,'$\dot{z}_{wfr}$') % fig68
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(zwrl_dot,'$\dot{z}_{wrl}$') % fig69
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(zwrr_dot,'$\dot{z}_{wrr}$') % fig70
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(Fsfl,'$F_{sfl}$') % fig71
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(Fsfr,'$F_{sfr}$') % fig72
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(Fsrl,'$F_{srl}$') % fig73
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(Fsrr,'$F_{srr}$') % fig74
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(z2dot_sfl,'$\ddot{z}_{sfl}$') % fig75
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(z2dot_sfr,'$\ddot{z}_{sfr}$') % fig76
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(z2dot_srl,'$\ddot{z}_{srl}$') % fig77
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(z2dot_srr,'$\ddot{z}_{srr}$') % fig78
+figure(fig_num);
+fig_num = fig_num + 1;
+signal_process_plot(Z2dot,'$\ddot{z}$') % fig79
+
+  figHandles = findall(0, 'Type', 'figure'); for i = 1:length(figHandles) set(figHandles(i), 'Units', 'normalized', 'OuterPosition', [0 0 1 1]); end
